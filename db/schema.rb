@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321101602) do
+ActiveRecord::Schema.define(:version => 20130321105802) do
+
+  create_table "feedback_cases", :force => true do |t|
+    t.string   "name",              :null => false
+    t.string   "slug",              :null => false
+    t.integer  "feedback_group_id", :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
 
   create_table "feedback_groups", :force => true do |t|
     t.string   "name",       :null => false
