@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321105802) do
+ActiveRecord::Schema.define(:version => 20130321111758) do
 
   create_table "feedback_cases", :force => true do |t|
     t.string   "name",              :null => false
@@ -29,5 +29,12 @@ ActiveRecord::Schema.define(:version => 20130321105802) do
   end
 
   add_index "feedback_groups", ["slug"], :name => "index_feedback_groups_on_slug", :unique => true
+
+  create_table "feedback_scores", :force => true do |t|
+    t.integer  "score",            :default => 0, :null => false
+    t.integer  "feedback_case_id",                :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
 
 end

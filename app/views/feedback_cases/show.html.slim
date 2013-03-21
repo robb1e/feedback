@@ -1,1 +1,22 @@
 h1= @feedback_case.name
+
+= simple_form_for FeedbackScore.new do |f|
+  = f.input :score, as: :hidden, input_html: { value: "-1" }
+  = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
+  = f.submit "Unhappy"
+
+= simple_form_for FeedbackScore.new do |f|
+  = f.input :score, as: :hidden, input_html: { value: "0" }
+  = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
+  = f.submit "Meh"
+
+
+= simple_form_for FeedbackScore.new do |f|
+  = f.input :score, as: :hidden, input_html: { value: "1" }
+  = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
+  = f.submit "Happy"
+
+h1= "score: #{@feedback_case.score}"
+h1= "unhappy: #{@feedback_case.unhappy_count}"
+h1= "meh: #{@feedback_case.meh_count}"
+h1= "happy: #{@feedback_case.happy_count}"

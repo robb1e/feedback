@@ -3,6 +3,7 @@ Feedback::Application.routes.draw do
 
   resources :feedback_groups, only: [:create]
   resources :feedback_cases, only: [:create]
+  resources :feedback_scores, only: [:create]
 
   scope ":id" do
     get '', to: "feedback_groups#show", as: "feedback_groups_show"
