@@ -4,3 +4,7 @@ h1= @feedback_group.name
   = f.input :feedback_group_id, as: :hidden, input_html: { value: @feedback_group.id }
   = f.input :name
   = f.submit
+
+ul
+  - @feedback_group.feedback_cases.each do |feedback_case|
+    li= link_to feedback_case.name, feedback_cases_show_path(@feedback_group.slug, feedback_case.slug)

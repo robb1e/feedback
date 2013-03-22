@@ -1,5 +1,5 @@
 Feedback::Application.routes.draw do
-  # root :to => 'welcome#index'
+  root :to => 'feedback#index'
 
   resources :feedback_groups, only: [:create]
   resources :feedback_cases, only: [:create]
