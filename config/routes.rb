@@ -10,12 +10,12 @@ Feedback::Application.routes.draw do
     get ':case_id', to: "feedback#case"
   end
 
-  # scope ":id" do
-    # get '', to: "feedback_groups#show", as: "feedback_groups_show"
-  # end
+  scope ":id" do
+    get '', to: "feedback_groups#show", as: "feedback_groups_show"
+  end
 
-  # scope ":feedback_group_id" do
-    # get ':id', to: "feedback_cases#show", as: "feedback_cases_show"
-  # end
+  scope ":feedback_group_id" do
+    get ':id', to: "feedback_cases#show", as: "feedback_cases_show"
+  end
 
 end
