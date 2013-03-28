@@ -7,6 +7,8 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'friendly_id'
+gem 'bourbon'
+gem 'neat'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
