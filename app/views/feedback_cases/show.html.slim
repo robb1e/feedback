@@ -1,5 +1,7 @@
 h1= @feedback_case.name
 
+= link_to "Stats", feedback_stats_path(@feedback_group, @feedback_case)
+
 = simple_form_for FeedbackScore.new do |f|
   = f.input :score, as: :hidden, input_html: { value: "-1" }
   = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
