@@ -16,6 +16,7 @@ Feedback::Application.routes.draw do
 
   scope ":feedback_group_id" do
     get ':id', to: "feedback_cases#show", as: "feedback_cases_show"
+    get ':id/stats', to: "feedback_cases#stats", as: "feedback_stats"
   end
 
 end
