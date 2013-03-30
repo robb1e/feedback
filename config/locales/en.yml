@@ -2,4 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      feedback_group:
+        create: "Go"
+      feedback_case:
+        create: "Go"
