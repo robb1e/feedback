@@ -1,2 +1,24 @@
 input.massive
   @include span-columns(6)
+
+#caseforms
+  form
+    display: inline
+
+  input[type=submit]
+    width: 33%
+    display: inline
+    height: 100px
+    float: left
+
+    &.happy
+      background-color: green
+      color: green
+
+    &.meh
+      background-color: yellow
+      color: yellow
+
+    &.unhappy
+      background-color: red
+      color: red

@@ -1,17 +1,19 @@
 h1= @feedback_case.name
 
-= simple_form_for FeedbackScore.new do |f|
-  = f.input :score, as: :hidden, input_html: { value: "-1" }
-  = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
-  = f.submit "Unhappy"
+#caseforms
 
-= simple_form_for FeedbackScore.new do |f|
-  = f.input :score, as: :hidden, input_html: { value: "0" }
-  = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
-  = f.submit "Meh"
+  = simple_form_for FeedbackScore.new do |f|
+    = f.input :score, as: :hidden, input_html: { value: "-1" }
+    = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
+    = f.submit "Unhappy", class: 'unhappy'
 
-= simple_form_for FeedbackScore.new do |f|
-  = f.input :score, as: :hidden, input_html: { value: "1" }
-  = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
-  = f.submit "Happy"
+  = simple_form_for FeedbackScore.new do |f|
+    = f.input :score, as: :hidden, input_html: { value: "0" }
+    = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
+    = f.submit "Meh", class: 'meh'
+
+  = simple_form_for FeedbackScore.new do |f|
+    = f.input :score, as: :hidden, input_html: { value: "1" }
+    = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
+    = f.submit "Happy", class: 'happy'
 

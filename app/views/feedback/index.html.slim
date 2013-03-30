@@ -1,6 +1,8 @@
-h1 Feed me feedback
+h1 Start a box
 
 = render partial: 'feedback_groups/form', locals: { feedback_group: FeedbackGroup.new }
+
+h2 Recently updated boxes
 
 ul
   - FeedbackGroup.last_updated.each do |group|
