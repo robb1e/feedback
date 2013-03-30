@@ -1,5 +1,3 @@
 h1 New Feedback Group
 
-= simple_form_for FeedbackGroup.new  do |f|
-  = f.input :name
-  = f.submit
+= render 'form', locals: { feedback_group: FeedbackGroup.new }

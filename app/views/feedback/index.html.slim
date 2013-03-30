@@ -1,8 +1,6 @@
 h1 Feed me feedback
 
-= simple_form_for FeedbackGroup.new do |f|
-  = f.input :name
-  = f.submit
+= render partial: 'feedback_groups/form', locals: { feedback_group: FeedbackGroup.new }
 
 ul
   - FeedbackGroup.last_updated.each do |group|
