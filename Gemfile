@@ -20,4 +20,6 @@ group :test, :development do
   gem "rspec-rails"
   gem "zeus"
   gem "shoulda-matchers"
+  gem "simple_bdd"
+  gem "capybara"
 end
