@@ -1,5 +1,9 @@
 h1 Feed me feedback
 
+= simple_form_for FeedbackGroup.new do |f|
+  = f.input :name
+  = f.submit
+
 ul
   - FeedbackGroup.all.each do |group|
     li= link_to group.name, feedback_groups_show_path(group.slug)
