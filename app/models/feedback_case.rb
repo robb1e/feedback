@@ -6,6 +6,10 @@ class FeedbackCase < ActiveRecord::Base
   validates_presence_of :name, :slug
   attr_accessible :name, :feedback_group, :feedback_group_id
 
+  def feedback_group_slug
+    feedback_group.slug
+  end
+
   def score
     feedback_scores.reduce(0) { |sum, score| sum + score.score }
   end

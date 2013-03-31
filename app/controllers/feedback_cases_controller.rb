@@ -1,7 +1,7 @@
 class FeedbackCasesController < ApplicationController
   def create
     feedback_case = FeedbackCase.create!(params[:feedback_case])
-    redirect_to feedback_cases_show_path(feedback_case.feedback_group.slug, feedback_case.slug)
+    redirect_to feedback_cases_show_path(feedback_case.feedback_group_slug, feedback_case.slug)
   end
 
   def stats
