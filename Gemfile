@@ -22,4 +22,5 @@ group :test, :development do
   gem "shoulda-matchers"
   gem "simple_bdd"
   gem "capybara"
+  gem "rails_best_practices"
 end
