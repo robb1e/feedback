@@ -6,18 +6,6 @@ class FeedbackCase < ActiveRecord::Base
   validates_presence_of :name, :slug
   attr_accessible :name, :feedback_group, :feedback_group_id
 
-  def unhappy_count
-    feedback_scores.where(score: -1).count
-  end
-
-  def meh_count
-    feedback_scores.where(score: 0).count
-  end
-
-  def happy_count
-    feedback_scores.where(score: 1).count
-  end
-
   def score
     feedback_scores.reduce(0) { |sum, score| sum + score.score }
   end
