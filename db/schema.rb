@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321111758) do
+ActiveRecord::Schema.define(:version => 20130331140022) do
 
   create_table "feedback_cases", :force => true do |t|
     t.string   "name",              :null => false
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(:version => 20130321111758) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
+
+  add_index "feedback_cases", ["feedback_group_id"], :name => "index_feedback_cases_on_feedback_group_id"
 
   create_table "feedback_groups", :force => true do |t|
     t.string   "name",       :null => false
@@ -36,5 +38,7 @@ ActiveRecord::Schema.define(:version => 20130321111758) do
     t.datetime "created_at",                      :null => false
     t.datetime "updated_at",                      :null => false
   end
+
+  add_index "feedback_scores", ["feedback_case_id"], :name => "index_feedback_scores_on_feedback_case_id"
 
 end
