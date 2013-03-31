@@ -3,9 +3,9 @@ h1= @feedback_case.name
 #caseforms
 
   = simple_form_for FeedbackScore.new do |f|
-    = f.input :score, as: :hidden, input_html: { value: "-1" }
+    = f.input :score, as: :hidden, input_html: { value: "1" }
     = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
-    = f.submit "Unhappy", class: 'unhappy'
+    = f.submit "Happy", class: 'happy'
 
   = simple_form_for FeedbackScore.new do |f|
     = f.input :score, as: :hidden, input_html: { value: "0" }
@@ -13,7 +13,8 @@ h1= @feedback_case.name
     = f.submit "Meh", class: 'meh'
 
   = simple_form_for FeedbackScore.new do |f|
-    = f.input :score, as: :hidden, input_html: { value: "1" }
+    = f.input :score, as: :hidden, input_html: { value: "-1" }
     = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
-    = f.submit "Happy", class: 'happy'
+    = f.submit "Unhappy", class: 'unhappy'
+
 

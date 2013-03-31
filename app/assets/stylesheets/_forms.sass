@@ -2,23 +2,18 @@ input.massive
   @include span-columns(6)
 
 #caseforms
-  form
-    display: inline
-
   input[type=submit]
-    width: 33%
-    display: inline
-    height: 100px
-    float: left
+    @include span-columns(4)
+    height: 200px
 
     &.happy
-      background-color: green
-      color: green
+      background-color: $green
+      color: $green
 
     &.meh
-      background-color: yellow
-      color: yellow
+      background-color: $yellow
+      color: $yellow
 
     &.unhappy
-      background-color: red
-      color: red
+      background-color: $red
+      color: $red
