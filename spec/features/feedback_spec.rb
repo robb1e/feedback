@@ -50,7 +50,6 @@ feature 'creating feedback' do
 
   def the_user_sees_the_happy_score_has_been_entered
     page.should have_content("score: 1")
-    page.should have_content("happy: 1")
   end
 
 end
