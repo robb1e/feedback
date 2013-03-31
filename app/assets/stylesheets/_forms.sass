@@ -1,5 +1,24 @@
-input.massive
-  @include span-columns(6)
+@mixin massive
+  @include span-columns(12)
+
+@mixin green_button
+  background-color: $green
+  color: $base
+  height: 66px
+  font-size: 24px
+
+.new_feedback_group
+  @include massive
+  .input
+    label
+      display: none
+    input[type=text]
+      @include span-columns(10)
+      font-size: 33px
+      padding: 10px
+  input[type=submit]
+    @include span-columns(2)
+    @include green_button
 
 #caseforms
   input[type=submit]
