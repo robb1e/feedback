@@ -15,6 +15,9 @@ feature 'creating feedback' do
 
     When "the user is on the stats page"
     Then "the user sees the happy score has been entered"
+
+    When "the user goes to a group which does not exist"
+    Then "the user is prompted to create a group"
   end
 
   def an_anonymous_user
@@ -50,6 +53,14 @@ feature 'creating feedback' do
 
   def the_user_sees_the_happy_score_has_been_entered
     page.should have_content("score: 1")
+  end
+
+  def the_user_goes_to_a_group_which_does_not_exist
+    visit "/nyc"
+  end
+
+  def the_user_is_prompted_to_create_a_group
+    page.should have_css(".new_feedback_group")
   end
 
 end
