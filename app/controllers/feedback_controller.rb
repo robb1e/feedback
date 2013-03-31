@@ -18,7 +18,7 @@ class FeedbackController < ApplicationController
       if @feedback_case
         render 'feedback_cases/show'
       else
-        render 'feedback_cases/new'
+        redirect_to feedback_groups_show_path(params[:group_id])
       end
     else
       redirect_to feedback_groups_show_path(params[:group_id])
