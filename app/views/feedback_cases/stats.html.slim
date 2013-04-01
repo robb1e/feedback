@@ -5,5 +5,5 @@
 / h1 #{@feedback_case.name}
 / p= "score: #{@feedback_case.score}"
 ul.face_grid
-  - @feedback_case.feedback_scores.all.each do |s|
+  - @feedback_case.feedback_scores.all.reverse.each do |s|
     li class="#{s.css_class}"
