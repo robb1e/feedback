@@ -1,24 +1,21 @@
 @mixin massive
   @include span-columns(12)
 
-@mixin green_button
-  background-color: $green
-  color: $base
-  height: 66px
-  font-size: 24px
-
 .new_feedback_group, .new_feedback_case
   @include massive
   .input
     label
       display: none
     input[type=text]
-      @include span-columns(10)
+      @include span-columns(12)
       font-size: 33px
       padding: 10px
   input[type=submit]
-    @include span-columns(2)
-    @include green_button
+    @include span-columns(12)
+    @include button($green)
+    font-size: 18px
+    line-height: 40px
+
 @media (-webkit-min-device-pixel-ratio: 1.25)
   #caseforms
     input[type=submit]

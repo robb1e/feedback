@@ -5,6 +5,6 @@ en:
   helpers:
     submit:
       feedback_group:
-        create: "Go"
+        create: "Create"
       feedback_case:
-        create: "Go"
+        create: "Create"
