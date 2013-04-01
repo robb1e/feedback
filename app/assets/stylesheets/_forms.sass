@@ -28,24 +28,30 @@
 
     &.happy
       background-color: $green
-      color: $green
       border: 1px solid $darkgreen
+      background: $green url(faces/white_happy.png) center center no-repeat
+      background-size: 60px 60px
+      text-indent: -99999px
       &:hover
         background-color: $lightgreen
       &:active
         background-color: $darkgreen
 
     &.meh
-      background-color: $orange
       color: $orange
       border: 1px solid $darkorange
+      background: $orange url(faces/white_meh.png) center center no-repeat
+      background-size: 60px 60px
+      text-indent: -99999px
       &:hover
         background-color: $lightorange
       &:active
         background-color: $darkorange
 
     &.unhappy
-      background-color: $red
+      background: $red url(faces/white_unhappy.png) center center no-repeat
+      background-size: 60px 60px
+      text-indent: -99999px
       color: $red
       border: 1px solid $darkred
       &:hover
