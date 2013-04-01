@@ -1,9 +1,40 @@
 nav
+  margin: 15px 0 30px 0
   ul
     padding-left: 0
   ul, li
     display: inline
   li:not(:first-child):before
-    content: '>'
+    content: ''
+    background: url(icons/wedge.png) center center no-repeat
+    background-size: 5px 7px
+    height: 17px
+    width: 5px
+    display: inline-block
     padding: 0 10px
+  li
+    a
+      line-height: 40px
+      padding: 4px 10px
+      text-decoration: none
+      font-weight: 700
+      font-size: 30px
+      @include transition (all 0.3s ease-in-out)
+      +border-radius(3px)
+      &:hover
+        background-color: $gray
+
+
+
+#pigeon
+  height: 40px
+  width: 40px
+  background: url(icons/pigeon-box.png) center center no-repeat
+  background-size: 30px 30px
+  float: left
+  text-indent: -99999px
+  @include transition (all 0.3s ease-in-out)
+  &:hover
+    background-color: $gray
+    +border-radius(3px)
 

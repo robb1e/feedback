@@ -22,18 +22,33 @@
 
 #caseforms
   input[type=submit]
-    @include span-columns(4)
-    height: 200px
+    @include span-columns(12)
+    height: 150px
     cursor: pointer
 
     &.happy
       background-color: $green
       color: $green
+      border: 1px solid $darkgreen
+      &:hover
+        background-color: $lightgreen
+      &:active
+        background-color: $darkgreen
 
     &.meh
-      background-color: $yellow
-      color: $yellow
+      background-color: $orange
+      color: $orange
+      border: 1px solid $darkorange
+      &:hover
+        background-color: $lightorange
+      &:active
+        background-color: $darkorange
 
     &.unhappy
       background-color: $red
       color: $red
+      border: 1px solid $darkred
+      &:hover
+        background-color: $lightred
+      &:active
+        background-color: $darkred

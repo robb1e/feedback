@@ -6,8 +6,18 @@ $lightbase: #a9a5a7
 $line: #dbd9d9
 
 $red: #e53f3f
+$darkred: shade($red, 20%)
+$lightred: tint($red, 20%)
 $gray: #dbd9d9
 $lightgray: #e2e1e1
 $orange: #f7941d
+$darkorange: shade($orange, 20%)
+$lightorange: tint($orange, 20%)
 $green: #38ae6f
+$darkgreen: shade($green, 20%)
+$lightgreen: tint($green, 20%)
 $yellow: #fff568
+
+@mixin border-radius($var)
+  @include border-top-radius($var)
+  @include border-bottom-radius($var)
