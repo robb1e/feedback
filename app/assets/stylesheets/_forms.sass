@@ -29,7 +29,7 @@
     &.happy
       background-color: $green
       border: 1px solid $darkgreen
-      background: $green url(faces/white_happy.png) center center no-repeat
+      background: $green image-url('faces/white_happy.png') center center no-repeat
       background-size: 60px 60px
       text-indent: -99999px
       &:hover
@@ -40,7 +40,7 @@
     &.meh
       color: $orange
       border: 1px solid $darkorange
-      background: $orange url(faces/white_meh.png) center center no-repeat
+      background: $orange image-url('faces/white_meh.png') center center no-repeat
       background-size: 60px 60px
       text-indent: -99999px
       &:hover
@@ -49,9 +49,9 @@
         background-color: $darkorange
 
     &.unhappy
-      background: $red url(faces/white_unhappy.png) center center no-repeat
       background-size: 60px 60px
       text-indent: -99999px
+      background: $red image-url('faces/white_unhappy.png') center center no-repeat
       color: $red
       border: 1px solid $darkred
       &:hover
