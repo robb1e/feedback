@@ -23,12 +23,12 @@
 #caseforms
   input[type=submit]
     @include span-columns(12)
-    height: 300px
+    height: 120px
     cursor: pointer
 
     &.happy
       background-color: $green
-      border: 1px solid $darkgreen
+      border: 5px solid $background
       background: $green image-url('faces/white_happy.png') center center no-repeat
       background-size: 60px 60px
       text-indent: -99999px
@@ -39,7 +39,7 @@
 
     &.meh
       color: $orange
-      border: 1px solid $darkorange
+      border: 5px solid $background
       background: $orange image-url('faces/white_meh.png') center center no-repeat
       background-size: 60px 60px
       text-indent: -99999px
@@ -53,7 +53,7 @@
       background-size: 60px 60px
       text-indent: -99999px
       color: $red
-      border: 1px solid $darkred
+      border: 5px solid $background
       &:hover
         background-color: $lightred
       &:active
