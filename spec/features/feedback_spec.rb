@@ -52,7 +52,7 @@ feature 'creating feedback' do
   end
 
   def the_user_sees_the_happy_score_has_been_entered
-    page.should have_content("score: 1")
+    page.should have_css("li.happy")
   end
 
   def the_user_goes_to_a_group_which_does_not_exist

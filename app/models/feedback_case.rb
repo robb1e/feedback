@@ -10,7 +10,4 @@ class FeedbackCase < ActiveRecord::Base
     feedback_group.slug
   end
 
-  def score
-    feedback_scores.reduce(0) { |sum, score| sum + score.score }
-  end
 end

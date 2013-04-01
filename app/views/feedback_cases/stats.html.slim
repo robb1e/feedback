@@ -1,9 +1,3 @@
-/ h1= "unhappy: #{@feedback_case.unhappy_count}"
-/ h1= "meh: #{@feedback_case.meh_count}"
-/ h1= "happy: #{@feedback_case.happy_count}"
-
-/ h1 #{@feedback_case.name}
-/ p= "score: #{@feedback_case.score}"
 ul.face_grid
   - @feedback_case.feedback_scores.all.reverse.each do |s|
     li class="#{s.css_class}"

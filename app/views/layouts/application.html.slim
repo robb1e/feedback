@@ -12,7 +12,7 @@ html
     .container
       nav
         ul
-          li.link= link_to "Home", root_path, :id => "pigeon"
+          li.link= link_to "Home", root_path, id: "pigeon"
           - if @feedback_group
             li.link= link_to @feedback_group.name, feedback_groups_show_path(@feedback_group)
             - if @feedback_case
