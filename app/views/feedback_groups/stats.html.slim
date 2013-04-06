@@ -1,10 +1,10 @@
-h2= link_to group_url(@feedback_group)
+h2= link_to group_url(@feedback_group), group_url(@feedback_group)
 
 ul
   - @feedback_group.feedback_cases.each do |feedback_case|
     li.case
       .name= feedback_case.name
-      .link= link_to case_url(@feedback_group, feedback_case)
+      .link= link_to case_url(@feedback_group, feedback_case), case_url(@feedback_group, feedback_case)
       .score= feedback_case.score
       .happy= feedback_case.happy_count
       .meh= feedback_case.meh_count

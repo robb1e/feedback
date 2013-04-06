@@ -9,4 +9,4 @@ h2 Recently updated shelfs
 
 ul
   - @feedback_group.feedback_cases.each do |feedback_case|
-    li= link_to feedback_case.name, feedback_cases_show_path(@feedback_group.slug, feedback_case.slug)
+    li= link_to feedback_case.name, case_path(@feedback_group.slug, feedback_case.slug)
