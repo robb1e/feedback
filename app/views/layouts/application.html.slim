@@ -15,9 +15,8 @@ html
         ul
           li.link= link_to "Home", root_path, id: "pigeon"
           - if @feedback_group
-            li.link= link_to @feedback_group.name, feedback_groups_show_path(@feedback_group)
+            li.link= link_to @feedback_group.name, group_path(@feedback_group)
             - if @feedback_case
-              li.link= link_to @feedback_case.name, feedback_cases_show_path(@feedback_group, @feedback_case)
-              / li.link= link_to "stats", feedback_stats_path(@feedback_group, @feedback_case)
+              li.link= link_to @feedback_case.name, case_path(@feedback_group, @feedback_case)
       .main
         = yield

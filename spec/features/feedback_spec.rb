@@ -32,7 +32,7 @@ feature 'creating feedback' do
   end
 
   def the_user_is_on_the_group_page
-    current_path.should == feedback_groups_show_path(@group)
+    should_be_on_group_page @group
   end
 
   def the_user_can_create_a_new_case
@@ -40,7 +40,7 @@ feature 'creating feedback' do
   end
 
   def the_user_is_on_the_case_page
-    current_path.should == feedback_cases_show_path(@group, @case)
+    should_be_on_case_page @group, @case
   end
 
   def the_user_can_submit_a_happy_score
@@ -48,7 +48,7 @@ feature 'creating feedback' do
   end
 
   def the_user_is_on_the_stats_page
-    visit feedback_stats_path(@group, @case)
+    visit_case_stats_page @group, @case
   end
 
   def the_user_sees_the_happy_score_has_been_entered

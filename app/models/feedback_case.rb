@@ -10,4 +10,19 @@ class FeedbackCase < ActiveRecord::Base
     feedback_group.slug
   end
 
+  def unhappy_count
+    feedback_scores.where(score: -1).count
+  end
+
+  def meh_count
+    feedback_scores.where(score: 0).count
+  end
+
+  def happy_count
+    feedback_scores.where(score: 1).count
+  end
+
+  def score
+    feedback_scores.reduce(0) { |sum, score| sum + score.score }
+  end
 end

@@ -6,17 +6,10 @@ Feedback::Application.routes.draw do
   resources :feedback_scores, only: [:create]
 
   scope ":group_id" do
-    get '', to: "feedback#group"
-    get ':case_id', to: "feedback#case"
-  end
-
-  scope ":id" do
-    get '', to: "feedback_groups#show", as: "feedback_groups_show"
-  end
-
-  scope ":feedback_group_id" do
-    get ':id', to: "feedback_cases#show", as: "feedback_cases_show"
-    get ':id/stats', to: "feedback_cases#stats", as: "feedback_stats"
+    get '', to: "feedback#group", as: 'group'
+    get '/stats', to: 'feedback#group_stats', as: 'group_stats'
+    get ':case_id', to: "feedback#case", as: 'case'
+    get ':case_id/stats', to: "feedback#case_stats", as: "case_stats"
   end
 
 end

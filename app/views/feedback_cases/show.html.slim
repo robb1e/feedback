@@ -15,6 +15,6 @@
     = f.input :feedback_case_id, as: :hidden, input_html: { value: @feedback_case.id }
     = f.submit "Unhappy", class: 'unhappy'
 footer
-  = link_to "Get Stats", feedback_stats_path(@feedback_group, @feedback_case), :id => "get_stats"
+  = link_to "Get Stats", case_stats_path(@feedback_group, @feedback_case), :id => "get_stats"
 
 

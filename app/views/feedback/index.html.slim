@@ -6,4 +6,7 @@ h2 Recently updated boxes
 
 ul
   - FeedbackGroup.last_updated.each do |group|
-    li= link_to group.name, feedback_groups_show_path(group.slug)
+    li
+      .name= group.name
+      .give= link_to "give it", group_path(group.slug)
+      .get= link_to "get it", group_stats_path(group.slug)
