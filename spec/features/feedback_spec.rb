@@ -13,8 +13,8 @@ feature 'creating feedback' do
     When "the user is on the case page"
     Then "the user can submit a happy score"
 
-    When "the user is on the stats page"
-    Then "the user sees the happy score has been entered"
+    When "the user visits the group page"
+    Then "the cases are listed"
 
     When "the user goes to a group which does not exist"
     Then "the user is prompted to create a group"
@@ -31,6 +31,14 @@ feature 'creating feedback' do
     @group = create_group
   end
 
+  def the_user_visits_the_group_page
+    visit_group_page @group
+  end
+
+  def the_cases_are_listed
+    cases_should_be_listed @group.feedback_cases
+  end
+
   def the_user_is_on_the_group_page
     should_be_on_group_page @group
   end
@@ -45,14 +53,6 @@ feature 'creating feedback' do
 
   def the_user_can_submit_a_happy_score
     click_on "Happy"
-  end
-
-  def the_user_is_on_the_stats_page
-    visit_case_stats_page @group, @case
-  end
-
-  def the_user_sees_the_happy_score_has_been_entered
-    page.should have_css("li.happy")
   end
 
   def the_user_goes_to_a_group_which_does_not_exist

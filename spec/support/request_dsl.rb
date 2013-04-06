@@ -24,4 +24,18 @@ module RequestDsl
     visit case_stats_path(group, cases)
   end
 
+  def visit_group_stats_page group
+    visit group_stats_path(group)
+  end
+
+  def visit_group_page group
+    visit group_path(group)
+  end
+
+  def cases_should_be_listed cases
+    cases.each do |feedback_case|
+      page.should have_content(feedback_case.name)
+    end
+  end
+
 end
