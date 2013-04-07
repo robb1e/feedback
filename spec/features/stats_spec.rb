@@ -36,4 +36,3 @@ feature 'feedback stats' do
   end
 
 end
-
